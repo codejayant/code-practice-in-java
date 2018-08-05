@@ -30,13 +30,13 @@ public class RemoveLinkedListElement {
         System.out.println("-------------------");
 
         int removeElementValue = 6;
-        removeElementsIterative(l1, removeElementValue);
+        removeElementsIterativeUsingDummyHead(l1, removeElementValue);
 
-        LinkedListUtil.printListNode(removeElementsIterative(l1, removeElementValue));
+        LinkedListUtil.printListNode(removeElementsIterativeUsingDummyHead(l1, removeElementValue));
 
     }
 
-    private static ListNode removeElementsIterative(ListNode head, int val) {
+    private static ListNode removeElementsIterativeUsingDummyHead(ListNode head, int val) {
         ListNode dummy = new ListNode(0);
         dummy.next = head;
 
