@@ -31,42 +31,42 @@ public class DepthFirstBinaryTreeTraversal {
 
 
         System.out.print("Pre-Order: ");
-        preOrder(l1);
+        preOrderTraversalDisplay(l1);
         System.out.println();
         System.out.print("Post-Order: ");
-        postOrder(l1);
+        postOrderTraversalDisplay(l1);
         System.out.println();
         System.out.print("In-Order: ");
-        inOrder(l1);
+        inOrderTraversalDisplay(l1);
     }
 
     /**
      * Order: Visited - Left - Right
      * @param node root node
      */
-    private static void preOrder(TreeNode node) {
+    private static void preOrderTraversalDisplay(TreeNode node) {
 
         if (node == null) {
             return;
         }
 
         System.out.print(node.val + " ");
-        preOrder(node.left);
-        preOrder(node.right);
+        preOrderTraversalDisplay(node.left);
+        preOrderTraversalDisplay(node.right);
     }
 
     /**
      * Order: Left - Right - Visited
      * @param node root node
      */
-    private static void postOrder(TreeNode node) {
+    private static void postOrderTraversalDisplay(TreeNode node) {
 
         if (node == null) {
             return;
         }
 
-        postOrder(node.left);
-        postOrder(node.right);
+        postOrderTraversalDisplay(node.left);
+        postOrderTraversalDisplay(node.right);
         System.out.print(node.val + " ");
     }
 
@@ -74,15 +74,15 @@ public class DepthFirstBinaryTreeTraversal {
      * Order: Left - Visited - Right
      * @param node root node
      */
-    private static void inOrder(TreeNode node) {
+    static void inOrderTraversalDisplay(TreeNode node) {
 
         if (node == null) {
             return;
         }
 
-        inOrder(node.left);
+        inOrderTraversalDisplay(node.left);
         System.out.print(node.val + " ");
-        inOrder(node.right);
+        inOrderTraversalDisplay(node.right);
     }
 
 }
