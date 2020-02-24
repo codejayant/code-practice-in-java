@@ -5,13 +5,12 @@ import com.codejayant.utils.TreeNode;
 import java.util.Stack;
 
 /**
- * post order iterative traversal using two stacks.
- * Pull node from tree, insert into the first stack in order: root, left and right and then pop from stack 1 and push to stack 2.
- * Once completed, print from stack 2.
+ * Iterative pre order traversal of binary tree.
+ * Using one stack to replace system's stack which is being used in recursive way.
  *
- * @link https://www.youtube.com/watch?v=qT65HltK2uE&list=PLrmLmBdmIlpv_jNDXtJGYTPNQ2L1gdHxu&index=10
+ * @link https://www.youtube.com/watch?v=elQcrJrfObg&list=PLrmLmBdmIlpv_jNDXtJGYTPNQ2L1gdHxu&index=11
  */
-public class PostOrderIterativeTraversalTwoStack {
+public class TraversalIterativePreOrder {
 
     public static void main(String[] args) {
         TreeNode l1 = new TreeNode(10);
@@ -20,6 +19,7 @@ public class PostOrderIterativeTraversalTwoStack {
         TreeNode l4 = new TreeNode(6);
         TreeNode l5 = new TreeNode(8);
         TreeNode l6 = new TreeNode(3);
+
 
         l1.left = l2;
         l1.right = l3;
@@ -34,44 +34,35 @@ public class PostOrderIterativeTraversalTwoStack {
         l6.left = null;
         l6.right = null;
 
-//        OutPut: Post-Order: 6 2 8 3 5 10
+//        OutPut: Pre-Order: 10 2 6 5 8 3
 
-        PostOrderIterativeTraversalTwoStack.postOrderTraversal(l1);
+        TraversalIterativePreOrder.traversalIterativePreOrder(l1);
     }
 
     /**
-     * method implementation on post order traversal iteratively using two stacks.
+     * method implementation on pre order traversal iteratively using one stacks.
      *
      * @param root root node
      */
-    private static void postOrderTraversal(TreeNode root) {
+    private static void traversalIterativePreOrder(TreeNode root) {
         if (root == null) {
             return;
         }
 
         Stack<TreeNode> s1 = new Stack<>();
-        Stack<TreeNode> s2 = new Stack<>();
-
         s1.push(root);
 
         while (!s1.isEmpty()) {
             root = s1.pop();
-
-            s2.push(root);
-
-            if (root.left != null) {
-                s1.push(root.left);
-            }
+            System.out.print(root.val + " ");
 
             if (root.right != null) {
                 s1.push(root.right);
             }
-        }
 
-        System.out.print("PostOrder: ");
-        while (!s2.isEmpty()) {
-            root = s2.pop();
-            System.out.print(root.val + " ");
+            if (root.left != null) {
+                s1.push(root.left);
+            }
         }
 
     }
