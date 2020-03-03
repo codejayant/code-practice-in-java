@@ -10,7 +10,7 @@ import java.util.Stack;
  *
  * @link https://www.youtube.com/watch?v=elQcrJrfObg&list=PLrmLmBdmIlpv_jNDXtJGYTPNQ2L1gdHxu&index=11
  */
-public class TraversalIterativePreOrder {
+public class PreOrderIterativeTraversal {
 
     public static void main(String[] args) {
         TreeNode l1 = new TreeNode(10);
@@ -36,7 +36,7 @@ public class TraversalIterativePreOrder {
 
 //        OutPut: Pre-Order: 10 2 6 5 8 3
 
-        TraversalIterativePreOrder.traversalIterativePreOrder(l1);
+        PreOrderIterativeTraversal.traversalIterativePreOrder(l1);
     }
 
     /**
@@ -56,6 +56,7 @@ public class TraversalIterativePreOrder {
             root = s1.pop();
             System.out.print(root.val + " ");
 
+            // add children right to left in stack so that left child is pop first.
             if (root.right != null) {
                 s1.push(root.right);
             }

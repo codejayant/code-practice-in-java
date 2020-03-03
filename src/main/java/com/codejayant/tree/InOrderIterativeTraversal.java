@@ -9,7 +9,7 @@ import java.util.Stack;
  *
  * @link https://www.youtube.com/watch?v=nzmtCFNae9k&list=PLrmLmBdmIlpv_jNDXtJGYTPNQ2L1gdHxu&index=12
  */
-public class TraversalIterativeInOrder {
+public class InOrderIterativeTraversal {
 
     public static void main(String[] args) {
         TreeNode l1 = new TreeNode(10);
@@ -35,7 +35,7 @@ public class TraversalIterativeInOrder {
 
 //        OutPut: In-Order: 6 2 10 8 5 3
 
-        TraversalIterativeInOrder.inOrderIterativeTraversal(l1);
+        InOrderIterativeTraversal.inOrderIterativeTraversal(l1);
     }
 
     /**
