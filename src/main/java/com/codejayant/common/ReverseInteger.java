@@ -1,4 +1,4 @@
-package com.codejayant;
+package com.codejayant.common;
 
 /**
  *  Given a 32-bit signed integer, reverse digits of an integer.

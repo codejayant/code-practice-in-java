@@ -10,6 +10,8 @@ import java.util.Stack;
  * Once completed, print from stack 2.
  *
  * @link https://www.youtube.com/watch?v=qT65HltK2uE&list=PLrmLmBdmIlpv_jNDXtJGYTPNQ2L1gdHxu&index=10
+ *
+ * @link article: https://leetcode.com/articles/binary-tree-postorder-transversal/
  */
 public class PostOrderIterativeTraversalTwoStack {
 

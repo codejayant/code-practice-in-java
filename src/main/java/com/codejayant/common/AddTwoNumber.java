@@ -1,4 +1,4 @@
-package com.codejayant;
+package com.codejayant.common;
 
 import com.codejayant.utils.ListNode;
 

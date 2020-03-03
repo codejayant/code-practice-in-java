@@ -1,4 +1,4 @@
-package com.codejayant;
+package com.codejayant.common;
 
 import java.util.HashMap;
 import java.util.Map;

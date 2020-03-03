@@ -1,4 +1,4 @@
-package com.codejayant;
+package com.codejayant.common;
 
 public class SimulateOutOfMemoryError {
 

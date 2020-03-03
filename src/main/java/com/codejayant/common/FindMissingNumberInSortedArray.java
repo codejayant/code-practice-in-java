@@ -1,4 +1,4 @@
-package com.codejayant;
+package com.codejayant.common;
 
 /**
  * Find the only missing number in a sorted array.
