@@ -53,7 +53,7 @@ public class MinimumBinaryTreeDepth {
             for (int i = 0; i < levelSize; i++) {
                 TreeNode currentNode = queue.poll();
 
-                // if currentNode is a leaf node, minimum depth is found by returning with +1
+                // if currentNode is a leaf node, minimum depth is returned
                 if (currentNode.left == null && currentNode.right == null) {
                     return minDepth;
                 }
