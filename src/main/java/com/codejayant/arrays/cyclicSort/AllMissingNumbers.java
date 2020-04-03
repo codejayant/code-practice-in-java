@@ -2,8 +2,22 @@ package com.codejayant.arrays.cyclicSort;
 
 import java.util.*;
 
+/**
+ * We are given an unsorted array containing numbers taken from the range 1 to ‘n’.
+ * The array can have duplicates, which means some numbers will be missing. Find all those missing numbers.
+ *
+ *
+ */
 class AllMissingNumbers {
 
+    /**
+     * find missing numbers in an array.
+     * T: O(n)
+     * S: O(1)
+     *
+     * @param nums input array
+     * @return missing numbers
+     */
     private static List<Integer> findNumbers(int[] nums) {
         int i = 0;
         while (i < nums.length) {
