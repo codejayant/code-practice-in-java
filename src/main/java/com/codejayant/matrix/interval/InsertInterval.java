@@ -1,4 +1,4 @@
-package com.codejayant.matrix;
+package com.codejayant.matrix.interval;
 
 import java.util.ArrayList;
 import java.util.List;

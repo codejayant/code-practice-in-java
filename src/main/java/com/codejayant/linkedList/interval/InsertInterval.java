@@ -1,4 +1,4 @@
-package com.codejayant.linkedList;
+package com.codejayant.linkedList.interval;
 
 import com.codejayant.utils.Interval;
 

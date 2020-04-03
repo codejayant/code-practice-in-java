@@ -1,4 +1,4 @@
-package com.codejayant.matrix;
+package com.codejayant.matrix.interval;
 
 import org.junit.Assert;
 

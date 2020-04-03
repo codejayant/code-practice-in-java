@@ -1,4 +1,4 @@
-package com.codejayant.arrays;
+package com.codejayant.arrays.cyclicSort;
 
 /**
  * Problem Statement
