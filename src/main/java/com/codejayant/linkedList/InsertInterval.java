@@ -44,6 +44,7 @@ class InsertInterval {
         }
 
         int size = intervals.size();
+        boolean isIntervalAdded = false;
 
         for (int i = 0; i < size; i++) {
             Interval currentInterval = intervals.get(i);
@@ -55,9 +56,10 @@ class InsertInterval {
 
                 Interval intervalToInsert = new Interval(start, end);
                 mergedIntervals.add(intervalToInsert);
+                isIntervalAdded = true;
 
                 // check for other element in original input if they need to merge with this new created interval.
-                for (; ++i < size; i++) {
+                for (; ++i < size; ) {
                     Interval internalCurrentInterval = intervals.get(i);
                     Interval intervalInserted = mergedIntervals.get(mergedIntervals.size() - 1);
 
@@ -80,6 +82,9 @@ class InsertInterval {
                 // no merge
                 mergedIntervals.add(currentInterval);
             }
+        }
+        if (!isIntervalAdded) {
+            mergedIntervals.add(newInterval);
         }
         return mergedIntervals;
     }
