@@ -1,4 +1,6 @@
-package com.codejayant.tree;
+package com.codejayant.linkedList;
+
+import com.codejayant.utils.Interval;
 
 import java.util.*;
 
@@ -11,7 +13,7 @@ import java.util.*;
 class MergeIntervals {
 
     private static List<Interval> merge(List<Interval> intervals) {
-        List<Interval> mergedIntervals = new LinkedList<Interval>();
+        List<Interval> mergedIntervals = new LinkedList<>();
         int size = intervals.size();
 
         if (size < 2) {
@@ -19,7 +21,8 @@ class MergeIntervals {
         }
 
         // sort intervals by start value
-        Collections.sort(intervals, (i1, i2) -> i1.start - i2.start);
+//        Collections.sort(intervals, (i1, i2) -> i1.start - i2.start);
+        intervals.sort(Comparator.comparingInt(i -> i.start));
 
         mergedIntervals.add(intervals.get(0));
         int mergedIndex = 0;
@@ -39,7 +42,7 @@ class MergeIntervals {
     }
 
     public static void main(String[] args) {
-        List<Interval> input = new ArrayList<Interval>();
+        List<Interval> input = new ArrayList<>();
         input.add(new Interval(1, 4));
         input.add(new Interval(2, 5));
         input.add(new Interval(7, 9));
@@ -48,7 +51,7 @@ class MergeIntervals {
             System.out.print("[" + interval.start + "," + interval.end + "] ");
         System.out.println();
 
-        input = new ArrayList<Interval>();
+        input = new ArrayList<>();
         input.add(new Interval(6, 7));
         input.add(new Interval(2, 4));
         input.add(new Interval(5, 9));
@@ -57,7 +60,7 @@ class MergeIntervals {
             System.out.print("[" + interval.start + "," + interval.end + "] ");
         System.out.println();
 
-        input = new ArrayList<Interval>();
+        input = new ArrayList<>();
         input.add(new Interval(1, 4));
         input.add(new Interval(2, 6));
         input.add(new Interval(3, 5));
@@ -68,12 +71,3 @@ class MergeIntervals {
     }
 }
 
-class Interval {
-    int start;
-    int end;
-
-    Interval(int start, int end) {
-        this.start = start;
-        this.end = end;
-    }
-}
