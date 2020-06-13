@@ -1,5 +1,8 @@
 package com.codejayant.utils;
 
+/**
+ * Node with single child.
+ **/ 
 public class ListNode {
 
     public int val;
