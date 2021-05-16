@@ -26,7 +26,9 @@ public class MaxSubArray {
 
     /**
      * greedy approach
+     * <p>
      * Time complexity : O(N) since it's one pass along the array.
+     * <p>
      * Space complexity : O(1), since it's a constant space solution.
      *
      * @param nums input array
