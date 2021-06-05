@@ -32,6 +32,9 @@ import org.junit.Assert;
  * 1 ≤ a[i][j] ≤ 104.
  *
  * [output] array.array.integer
+ *
+ * @see <a href="https://app.codesignal.com/interview-practice/task/5A8jwLGcEpTPyyjTB/description">CodeSignal Problem</a>
+ * @see <a href="https://www.youtube.com/watch?v=IdZlsG6P17w">YouTube Solution - Nick White</a>
  */
 public class RotateImage {
 
